@@ -1,7 +1,7 @@
 {
   "name": "streamone",
   "version": "1.0.0",
-  "description": "",
+  "description": "-Showing off the bands music and members\r -Making it easy for customers to see availability and book band for events\r -Forward customers to bands social media sites",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/Raifeld/streamone/issues"
   },
-  "homepage": "https://github.com/Raifeld/streamone#readme"
+  "homepage": "https://github.com/Raifeld/streamone#readme",
+  "dependencies": {
+    "npm": "^3.10.10"
+  },
+  "devDependencies": {}
 }

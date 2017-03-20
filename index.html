@@ -1,13 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="TodoApp">
 <head>
-    <title>Angular Todo</title>
-    <base href="/"> <!-- needed for Angular HTML5 mode -->
+    <title>Rat Pack</title>
+    <base href="/"> <!-- needed for Angular HTML 5 mode -->
     <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script type="text/javascript" src="bower_components/angular/angular.js"></script>
     <script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
+    <script type="text/javascript" src="bower_components/a0-angular-storage/dist/angular-storage.js"></script>
+    <style type="text/css">
+    	body {
+    		padding-top: 70px;
+    	}
+    	#contanier1 {
+    		width: 100px;
+    		height: 100px;
+    		background-color: red;
+    	}
+    </style>
 </head>
 <body>
-    <h1>Welcome to Angular Todo!</h1>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="/">Rat Pack</a>
+			</div>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="/">Book The Band</a></li>
+				<li><a href="/todo">Check Out The Music</a></li>
+				<li><a href="/accounts/register">Meet The Band</a></li>
+			</ul>
+		</div>
+	</nav>
+
+
+	<div ng-view>
+
+	</div>
+	<script src="js/app.js"></script>
+	<script src="js/controller.js"></script>
+	<script src="js/service.js"></script>
+	<script src='js/directive.js'></script>
 </body>
 </html>
+
+<!-- So far what we’ve managed to do is set up the boilerplate for our project. Most projects will require a similar process for getting them ready to go!
+
+Firstly we create a new repository to house our project. Then we set up NPM to allow us to manage our project. NPM is a commonly used tool that allows developers to install loads of extensions to manage their projects. These tools include Bower, Gulp, test runners, as well as many, many other tools!
+
+Next we use NPM to install Bower. Bower allows us to install frameworks and libraries, such as Bootstrap, Angular, jQuery, Foundation, and many others. The reason we use this tool is simply so we don’t have to go and download each of these from their respective websites. It’s also beneficial in that we don’t have to store all those frameworks in our repository, which saves space in the repository.
+
+After that we installed http-server. http-server -c-1 will emulate a server and by default it will serve the index.html file in the directory the command is run from. The reason that we need to install this is because angular-route won’t work if it’s not served by a server.
+
+Then we created a .gitignore file to tell Git that we don’t want to store either the bower_components or node_modules directories. While it may seem like a lot of effort, it does save quite a lot of time and effort over the course of the project. Especially if new people are coming and going from the project.-->
